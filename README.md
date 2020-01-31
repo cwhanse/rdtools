@@ -24,7 +24,7 @@ RdTools supports a number of workflows, but a typical analysis follows the follo
 4. Analyze aggregated data to estimate the degradation rate and/or soiling loss  
 
 Steps 1 and 2 may be accomplished with the clearsky workflow ([see example](https://rdtools.readthedocs.io/en/latest/example.html))
-which can help elliminate problems from irradiance sensor drift.  
+which can help eliminate problems from irradiance sensor drift.  
 
 <img src="./_static/RdTools_workflows.png" width="400" height="247" alt="RdTools Workflow"/>
 
@@ -49,7 +49,7 @@ of instrument errors or irradiance sensor drift, such as in the above analysis.
 
 
 ## Soiling Results
-Soiling can be estimated with the stochastic rate and recovery (SRR) method (Deceglie 2018). This method works well when soiling patterns follow a "sawtooth" pattern, a linear decline followed by a sharp recovery associated with natural or mannual cleaning. `rdtools.soiling_srr()` performs the calculation and returns the P50 insolation-weighted soiling ratio, confidence interval, and additional information (`soiling_info`) which includes a summary of the soiling intervals identified, `soiling_info['soiling_interval_summary']`. This summary table can, for example, be used to plot a histogram of the identified soiling rates for the dataset.  
+Soiling can be estimated with the stochastic rate and recovery (SRR) method (Deceglie 2018). This method works well when soiling patterns follow a "sawtooth" pattern, a linear decline followed by a sharp recovery associated with natural or manual cleaning. `rdtools.soiling_srr()` performs the calculation and returns the P50 insolation-weighted soiling ratio, confidence interval, and additional information (`soiling_info`) which includes a summary of the soiling intervals identified, `soiling_info['soiling_interval_summary']`. This summary table can, for example, be used to plot a histogram of the identified soiling rates for the dataset.  
 
 <img src="./_static/soiling_histogram.png" width="320" height="216" alt="RdTools Result"/>
 
@@ -73,7 +73,7 @@ RdTools currently is tested on Python 3.6+.
 
 Full workflow examples are found in the notebooks in [rdtools/docs](https://rdtools.readthedocs.io/en/latest/example.html). The examples are designed to work with python 3.6. For a consistent experience, we recommend installing the packages and versions documented in `docs/notebook_requirements.txt`. This can be achieved in your environment by first installing RdTools as described above, then running `pip install -r docs/notebook_requirements.txt` from the base directory.
 
-The following functions are used for degradation analysis:
+The following functions are used for degradation and soiling analysis:
 
 ```
 import rdtools
